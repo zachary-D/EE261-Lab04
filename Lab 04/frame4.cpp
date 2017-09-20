@@ -10,15 +10,20 @@ using namespace std;
 int main()
 {
 	ifstream inFile;
+	ofstream outFile;
+
 	inFile.open("Frame.in");
+	outFile.open("Frame.out");
+
+
 	int side; // Vertical dimension in inches
 	int top; // Horizontal dimension in inches
 	int inchesOfWood; // Inches of wood needed
 	inFile >> side >> top;
-	cout << "Dimensions are " << top << " and "
+	outFile << "Dimensions are " << top << " and "
 		<< side << "." << endl;
 	inchesOfWood = top + top + side + side;
-	cout << "You need " << inchesOfWood << " inches of wood."
+	outFile << "You need " << inchesOfWood << " inches of wood."
 		<< endl;
 
 	cin.get();
