@@ -26,7 +26,10 @@ int main()
 	outFile << "You need " << inchesOfWood << " inches of wood."
 		<< endl;
 
-	cin.get();
+	inFile.close();
+	outFile.close();
+
+	cin.get();		//Hold the window open
 
 	return 0;
 }
